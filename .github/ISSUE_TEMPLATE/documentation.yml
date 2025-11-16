@@ -1,0 +1,44 @@
+name: "Documentation Issue"
+description: "Report issues or suggest improvements for documentation."
+title: "[Docs] <short description>"
+labels: ["documentation"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Documentation Issue
+        Please explain what needs to be fixed or added.
+
+  - type: textarea
+    id: location
+    attributes:
+      label: Documentation Location
+      placeholder: "File path, URL, or section name"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Description of Issue
+      placeholder: "Is the doc incorrect, incomplete, outdated, unclear?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested Fix
+      placeholder: "What should the documentation include instead?"
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      placeholder: "Screenshots, links, examples..."
+    validations:
+      required: false
