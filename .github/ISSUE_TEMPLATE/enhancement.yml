@@ -1,0 +1,44 @@
+name: "Enhancement"
+description: "Suggest improvements to existing functionality."
+title: "[Enhancement] <short description>"
+labels: ["enhancement"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Enhancement Request
+        Suggest an improvement to an existing feature.
+
+  - type: textarea
+    id: current
+    attributes:
+      label: Current Behaviour
+      placeholder: "What is happening now?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: improvement
+    attributes:
+      label: Suggested Improvement
+      placeholder: "What should happen instead?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why This Matters
+      placeholder: "How does this improve usability / performance / workflow?"
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Notes
+      placeholder: "References, related issues, examples..."
+    validations:
+      required: false
