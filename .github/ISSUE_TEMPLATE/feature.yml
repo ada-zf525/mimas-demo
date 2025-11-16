@@ -1,5 +1,5 @@
 name: "Feature Request"
-description: "Request a new feature."
+description: "Request a new feature or capability."
 title: "[Feature] <short description>"
 labels: ["feature"]
 assignees: []
@@ -9,36 +9,51 @@ body:
     attributes:
       value: |
         ## Feature Request
-        Describe the new feature and why it should be added.
+        Please describe your feature in clear and structured detail.
 
   - type: textarea
-    id: problem
+    id: description
     attributes:
-      label: Problem to Solve
-      placeholder: "What problem does this feature address?"
+      label: Description
+      description: |
+        What feature do you want to add and why?
+      placeholder: |
+        Explain the feature and the problem it solves.
     validations:
       required: true
 
   - type: textarea
-    id: proposal
+    id: acceptance_criteria
     attributes:
-      label: Proposed Solution
-      placeholder: "Describe the feature in detail"
+      label: Acceptance Criteria
+      description: |
+        Define measurable conditions that must be met.
+      placeholder: |
+        - AC1: ...
+        - AC2: ...
+        - AC3: ...
+      render: markdown
     validations:
       required: true
 
-  - type: textarea
-    id: alternatives
+  - type: checkboxes
+    id: checklist
     attributes:
-      label: Alternatives Considered
-      placeholder: "Other solutions you've tried or considered"
+      label: Checklist
+      description: Ensure all items are completed.
+      options:
+        - label: I have checked for duplicate issues.
+        - label: I have provided a clear feature description.
+        - label: I have defined acceptance criteria.
+        - label: I believe this feature fits the project scope.
     validations:
       required: false
 
   - type: textarea
     id: additional
     attributes:
-      label: Additional Context
-      placeholder: "Mockups, references, links..."
+      label: Additional Notes
+      description: Add mockups, references, or context.
+      placeholder: "Optional: diagrams, links, screenshots..."
     validations:
       required: false
