@@ -1,0 +1,71 @@
+name: "Bug Report"
+description: "Report a reproducible bug in the project."
+title: "[Bug] <short description>"
+labels: ["bug"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Bug Report
+        Please describe the problem clearly and provide enough info for reproduction.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      placeholder: "Short description of the bug"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      placeholder: |
+        1. Go to...
+        2. Perform...
+        3. Observe...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behaviour
+      placeholder: "What you expected to happen"
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behaviour
+      placeholder: "What actually happened"
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots / Logs
+      description: Drag-and-drop images or copy error logs if relevant.
+    validations:
+      required: false
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment Info
+      placeholder: "OS / Version / Browser / Python version / Node version ..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      placeholder: "Anything else?"
+    validations:
+      required: false
